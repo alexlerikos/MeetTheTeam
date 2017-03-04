@@ -9,11 +9,17 @@
 import UIKit
 
 class MTTMainViewController: UIViewController {
-
-    override func viewDidLoad() {
+	
+	// MARK: Properties
+	var tableView:UITableView?
+	
+	
+	// MARK: Initializers 
+	override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		self.view.backgroundColor = UIColor.white
+		self.setupMainTableView()
+		
     }
 
     override func didReceiveMemoryWarning() {
