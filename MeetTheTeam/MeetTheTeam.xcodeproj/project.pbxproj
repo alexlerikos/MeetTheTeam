@@ -17,6 +17,8 @@
 		C59180251E6B415200BAD62D /* MeetTheTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59180241E6B415200BAD62D /* MeetTheTeamUITests.swift */; };
 		C59180331E6B421700BAD62D /* MTTMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59180321E6B421700BAD62D /* MTTMainViewController.swift */; };
 		C59180391E6B42AE00BAD62D /* MTTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59180381E6B42AE00BAD62D /* MTTNavigationController.swift */; };
+		C591804A1E6B508200BAD62D /* MTTMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59180491E6B508200BAD62D /* MTTMember.swift */; };
+		C591804D1E6B528700BAD62D /* team.json in Resources */ = {isa = PBXBuildFile; fileRef = C591804C1E6B528700BAD62D /* team.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		C59180261E6B415200BAD62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C59180321E6B421700BAD62D /* MTTMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTMainViewController.swift; sourceTree = "<group>"; };
 		C59180381E6B42AE00BAD62D /* MTTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTNavigationController.swift; sourceTree = "<group>"; };
+		C59180491E6B508200BAD62D /* MTTMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTMember.swift; sourceTree = "<group>"; };
+		C591804C1E6B528700BAD62D /* team.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = team.json; sourceTree = "<group>"; };
 		E7CD7C59805C4BFB72AB7170 /* Pods_MeetTheTeamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetTheTeamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3B07B9CCE6ED40C095380A /* Pods-MeetTheTeamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetTheTeamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetTheTeamTests/Pods-MeetTheTeamTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +135,7 @@
 				C59180351E6B424400BAD62D /* Navigation */,
 				C59180341E6B421C00BAD62D /* Main View Controller */,
 				C591803C1E6B458400BAD62D /* Profile View Controller */,
+				C591804B1E6B526E00BAD62D /* Resources */,
 				C591800B1E6B415200BAD62D /* Assets.xcassets */,
 				C59180101E6B415200BAD62D /* Info.plist */,
 				C59180081E6B415200BAD62D /* MeetTheTeam.xcdatamodeld */,
@@ -196,8 +201,17 @@
 		C591803D1E6B463A00BAD62D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C59180491E6B508200BAD62D /* MTTMember.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		C591804B1E6B526E00BAD62D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C591804C1E6B528700BAD62D /* team.json */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		EE1BA8D4A44FB9AD7703D8C9 /* Pods */ = {
@@ -331,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C591804D1E6B528700BAD62D /* team.json in Resources */,
 				C591800C1E6B415200BAD62D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C591804A1E6B508200BAD62D /* MTTMember.swift in Sources */,
 				C59180021E6B415200BAD62D /* AppDelegate.swift in Sources */,
 				C59180391E6B42AE00BAD62D /* MTTNavigationController.swift in Sources */,
 				C591800A1E6B415200BAD62D /* MeetTheTeam.xcdatamodeld in Sources */,
