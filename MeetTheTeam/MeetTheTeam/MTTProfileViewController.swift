@@ -13,7 +13,6 @@ class MTTProfileViewController: UIViewController {
 
 	// MARK: Properties
 	var member:MTTMember?
-	var nameLabel:ProfileNameLabel?
 	var titleLabel:ProfileTitleLabel?
 	var bioTextView:ProfileBioTextView?
 	var profileImageView:UIImageView?
@@ -24,7 +23,6 @@ class MTTProfileViewController: UIViewController {
 		
 		self.setUpViewAppearance()
 		self.setUpProfileImageView()
-		self.setUpNameLabelView()
 		self.setUpTitleLabel()
 		self.setUpBioLabelTextView()
 		
@@ -42,6 +40,8 @@ class MTTProfileViewController: UIViewController {
 		}
 		
 		self.navigationItem.title = "\(self.member!.firstName!) \(self.member!.lastName!)"
+		self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+		self.navigationController?.navigationItem
 		self.view.backgroundColor = UIColor.mainBackgroundColor()
 	}
 	
@@ -66,6 +66,10 @@ class MTTProfileViewController: UIViewController {
 			self.profileImageView!.image = UIImage(named:"AvatarBase")
 		}
 		
+		let radius:CGFloat = self.view.frame.width/2
+		self.profileImageView?.layer.cornerRadius = radius
+		self.profileImageView?.clipsToBounds = true
+		
 		self.view.addSubview(self.profileImageView!)
 		
 		// Constraints
@@ -84,30 +88,6 @@ class MTTProfileViewController: UIViewController {
 
 	}
 	
-	private func setUpNameLabelView() {
-		self.nameLabel = ProfileNameLabel(frame: CGRect(x: 0.0, y: 500.0, width: 100.0, height: 24.0))
-		self.nameLabel!.translatesAutoresizingMaskIntoConstraints = false
-		
-		if self.member != nil {
-			self.nameLabel!.setNameText(member: self.member!)
-		}
-		
-		self.view.addSubview(self.nameLabel!)
-		
-		//Constraints
-		let heightConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .height, relatedBy: .equal,
-		                                          toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0)
-		//
-		let widthConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 300.0)
-		//
-		let yConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .bottom, relatedBy: .equal, toItem: self.profileImageView!, attribute: .bottom, multiplier: 1.0, constant: -20.0)
-		//
-		let xConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .leading, relatedBy: .equal, toItem: self.nameLabel!.superview, attribute: .leading, multiplier: 1.0, constant: 8.0)
-		
-		self.view.addConstraints([yConstraint,xConstraint,widthConstraint,heightConstraint])
-
-	}
-	
 	private func setUpTitleLabel(){
 		self.titleLabel = ProfileTitleLabel(frame: CGRect.zero)
 		self.titleLabel!.translatesAutoresizingMaskIntoConstraints = false
@@ -115,7 +95,7 @@ class MTTProfileViewController: UIViewController {
 		if self.member != nil {
 			self.titleLabel!.setTitleText(member: self.member!)
 		}
-
+		
 		self.view.addSubview(self.titleLabel!)
 		
 		//Constraints

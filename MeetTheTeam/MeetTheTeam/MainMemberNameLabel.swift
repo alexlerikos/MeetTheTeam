@@ -24,6 +24,7 @@ class MainMemberNameLabel: UILabel {
 	private func setupLabel(){
 		self.text = "No name"
 		self.textColor = UIColor.textColor()
+		self.font = UIFont.mainNameFont()
 	}
 	
 	func setNameText(member:MTTMember){

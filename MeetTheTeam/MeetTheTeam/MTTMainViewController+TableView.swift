@@ -45,6 +45,11 @@ extension MTTMainViewController : UITableViewDelegate, UITableViewDataSource {
 		
 		let profileVC = MTTProfileViewController()
 		profileVC.member = self.teamMemberArray?[indexPath.row]
+		
+		let backItem = UIBarButtonItem()
+		backItem.title = ""
+		backItem.tintColor = UIColor.textColor()
+		self.navigationItem.backBarButtonItem = backItem
 		self.navigationController?.pushViewController(profileVC, animated: true)
 	}
 }

@@ -35,6 +35,11 @@
 		C5F6523E1E6CC1D900586B58 /* Abadi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5F6523D1E6CC1D900586B58 /* Abadi.ttf */; };
 		C5F6523F1E6CC1D900586B58 /* Abadi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5F6523D1E6CC1D900586B58 /* Abadi.ttf */; };
 		C5F652401E6CC1D900586B58 /* Abadi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5F6523D1E6CC1D900586B58 /* Abadi.ttf */; };
+		C5F6524A1E6CC7CA00586B58 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F652491E6CC7CA00586B58 /* UIFont+Custom.swift */; };
+		C5F6524C1E6CD4B000586B58 /* Exo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5F6524B1E6CD4B000586B58 /* Exo-Bold.otf */; };
+		C5F6524E1E6CD5ED00586B58 /* Exo-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5F6524D1E6CD5ED00586B58 /* Exo-ExtraBold.otf */; };
+		C5F652501E6CD87900586B58 /* SanFranciscoText-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5F6524F1E6CD87900586B58 /* SanFranciscoText-RegularItalic.otf */; };
+		C5F652521E6CD88200586B58 /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5F652511E6CD88200586B58 /* SanFranciscoText-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +96,11 @@
 		C591804C1E6B528700BAD62D /* team.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = team.json; sourceTree = "<group>"; };
 		C591804E1E6B62EB00BAD62D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5F6523D1E6CC1D900586B58 /* Abadi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Abadi.ttf; sourceTree = "<group>"; };
+		C5F652491E6CC7CA00586B58 /* UIFont+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
+		C5F6524B1E6CD4B000586B58 /* Exo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Bold.otf"; sourceTree = "<group>"; };
+		C5F6524D1E6CD5ED00586B58 /* Exo-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-ExtraBold.otf"; sourceTree = "<group>"; };
+		C5F6524F1E6CD87900586B58 /* SanFranciscoText-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-RegularItalic.otf"; sourceTree = "<group>"; };
+		C5F652511E6CD88200586B58 /* SanFranciscoText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Regular.otf"; sourceTree = "<group>"; };
 		E7CD7C59805C4BFB72AB7170 /* Pods_MeetTheTeamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetTheTeamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3B07B9CCE6ED40C095380A /* Pods-MeetTheTeamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetTheTeamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetTheTeamTests/Pods-MeetTheTeamTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -244,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				C57C82E71E6B676200E658A0 /* MTTConstants.swift */,
+				C5F652491E6CC7CA00586B58 /* UIFont+Custom.swift */,
 				C563F8221E6BE025009234E0 /* UIColor+Custom.swift */,
 			);
 			name = Utility;
@@ -285,9 +296,29 @@
 		C5F652481E6CC5A800586B58 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				C5F652531E6CD88A00586B58 /* SF Font */,
+				C5F652541E6CD89200586B58 /* Exo Font */,
 				C5F6523D1E6CC1D900586B58 /* Abadi.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		C5F652531E6CD88A00586B58 /* SF Font */ = {
+			isa = PBXGroup;
+			children = (
+				C5F652511E6CD88200586B58 /* SanFranciscoText-Regular.otf */,
+				C5F6524F1E6CD87900586B58 /* SanFranciscoText-RegularItalic.otf */,
+			);
+			name = "SF Font";
+			sourceTree = "<group>";
+		};
+		C5F652541E6CD89200586B58 /* Exo Font */ = {
+			isa = PBXGroup;
+			children = (
+				C5F6524D1E6CD5ED00586B58 /* Exo-ExtraBold.otf */,
+				C5F6524B1E6CD4B000586B58 /* Exo-Bold.otf */,
+			);
+			name = "Exo Font";
 			sourceTree = "<group>";
 		};
 		EE1BA8D4A44FB9AD7703D8C9 /* Pods */ = {
@@ -421,8 +452,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F6524E1E6CD5ED00586B58 /* Exo-ExtraBold.otf in Resources */,
+				C5F652521E6CD88200586B58 /* SanFranciscoText-Regular.otf in Resources */,
 				C591804F1E6B62EB00BAD62D /* LaunchScreen.storyboard in Resources */,
 				C591804D1E6B528700BAD62D /* team.json in Resources */,
+				C5F652501E6CD87900586B58 /* SanFranciscoText-RegularItalic.otf in Resources */,
+				C5F6524C1E6CD4B000586B58 /* Exo-Bold.otf in Resources */,
 				C5F6523E1E6CC1D900586B58 /* Abadi.ttf in Resources */,
 				C591800C1E6B415200BAD62D /* Assets.xcassets in Resources */,
 			);
@@ -587,6 +622,7 @@
 				C591800A1E6B415200BAD62D /* MeetTheTeam.xcdatamodeld in Sources */,
 				C563F81F1E6BB0F0009234E0 /* ProfileBioLabel.swift in Sources */,
 				C57C82EC1E6B86DE00E658A0 /* AvatarRoundImageView.swift in Sources */,
+				C5F6524A1E6CC7CA00586B58 /* UIFont+Custom.swift in Sources */,
 				C57C82F11E6B9D3C00E658A0 /* MainMemberTitleLabel.swift in Sources */,
 				C57C82EE1E6B995C00E658A0 /* MainMemberNameLabel.swift in Sources */,
 				C563F8211E6BD86C009234E0 /* ProfileBioTextView.swift in Sources */,

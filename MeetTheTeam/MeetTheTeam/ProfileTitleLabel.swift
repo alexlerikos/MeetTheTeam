@@ -24,6 +24,7 @@ class ProfileTitleLabel: UILabel {
 	private func setupLabel(){
 		self.text = "No title"
 		self.textColor = UIColor.textColor()
+		self.font = UIFont.profileTitleFont()
 	}
 	
 	func setTitleText(member:MTTMember){

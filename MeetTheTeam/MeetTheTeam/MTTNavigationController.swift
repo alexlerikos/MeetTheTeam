@@ -18,7 +18,6 @@ class MTTNavigationController: UINavigationController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 	
 	private func setUpAppearance(){
@@ -34,25 +33,16 @@ class MTTNavigationController: UINavigationController {
 		self.navigationBar.barTintColor = UIColor.navBarBackgroundColor()
 		self.navigationBar.titleTextAttributes = [
 			NSForegroundColorAttributeName : UIColor.textColor(),
-			NSFontAttributeName: UIFont(name: "AbadiMT-CondensedExtraBold", size: 27)!]
-		for family: String in UIFont.familyNames
-		{
+			NSFontAttributeName: UIFont.navigationBarFont()]
+		self.navigationBar.tintColor = UIColor.textColor()
+		
+		for family in UIFont.familyNames {
 			print("\(family)")
-			for names: String in UIFont.fontNames(forFamilyName: family)
-			{
-				print("== \(names)")
+			
+			for name in UIFont.fontNames(forFamilyName: family) {
+				print("   \(name)")
 			}
 		}
 	}
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
