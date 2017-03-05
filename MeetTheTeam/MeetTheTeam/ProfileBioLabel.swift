@@ -10,12 +10,25 @@ import UIKit
 
 class ProfileBioLabel: UILabel {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+	required init(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)!
+		self.setupLabel()
+		
+	}
+	
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+		self.setupLabel()
+	}
+	
+	private func setupLabel(){
+		self.text = "No Bio"
+		self.textColor = UIColor.white
+		self.numberOfLines = 0
+	}
+	
+	func setBioText(member:MTTMember){
+		self.text = member.bio!
+	}
 
 }

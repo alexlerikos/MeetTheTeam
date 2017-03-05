@@ -93,15 +93,17 @@ class MTTProfileViewController: UIViewController {
 		self.view.addSubview(self.nameLabel!)
 		
 		//Constraints
+		let heightConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .height, relatedBy: .equal,
+		                                          toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0)
+		//
+		let widthConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 200.0)
+		//
+		let yConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .bottom, relatedBy: .equal, toItem: self.profileImageView!, attribute: .bottom, multiplier: 1.0, constant: -20.0)
+		//
+		let xConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .leading, relatedBy: .equal, toItem: self.nameLabel!.superview, attribute: .leading, multiplier: 1.0, constant: 8.0)
 		
-		//Y Constraint
-		self.view.addConstraint(NSLayoutConstraint(item: self.nameLabel!, attribute: .bottom, relatedBy: .equal, toItem: self.profileImageView!, attribute: .bottom, multiplier: 1.0, constant: -20.0))
-		//X Constraint
-		self.view.addConstraint(NSLayoutConstraint(item: self.nameLabel!, attribute: .leading, relatedBy: .equal, toItem: self.nameLabel?.superview, attribute: .leading, multiplier: 1.0, constant: 8.0))
-		//Height Constraint
-		self.view.addConstraint(NSLayoutConstraint(item: self.nameLabel!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0))
-		//Width Constraint
-		self.view.addConstraint(NSLayoutConstraint(item: self.nameLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 200.0))
+		self.view.addConstraints([yConstraint,xConstraint,widthConstraint,heightConstraint])
+
 	}
 	
 	private func setUpTitleLabel(){
@@ -117,19 +119,33 @@ class MTTProfileViewController: UIViewController {
 		//Constraints
 		let heightConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .height, relatedBy: .equal,
 			toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0)
-		//
-		let widthConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 200.0)
-		//
+		let trailingConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .trailing, relatedBy: .equal, toItem: self.titleLabel!.superview, attribute: .trailing, multiplier: 1.0, constant: -8.0)
 		let yConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .top, relatedBy: .equal, toItem: self.profileImageView!, attribute: .bottom, multiplier: 1.0, constant: 8.0)
-		//
+		
 		let xConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .leading, relatedBy: .equal, toItem: self.titleLabel?.superview, attribute: .leading, multiplier: 1.0, constant: 8.0)
-		//
-		self.view.addConstraints([yConstraint,xConstraint,widthConstraint,heightConstraint,])
+		
+		self.view.addConstraints([yConstraint,xConstraint,trailingConstraint,heightConstraint])
 
 	}
 	
 	private func setUpBioLabel(){
+		self.bioLabel = ProfileBioLabel(frame: CGRect.zero)
+		self.bioLabel!.translatesAutoresizingMaskIntoConstraints = false
 		
+		if self.member != nil {
+			self.bioLabel!.setBioText(member: self.member!)
+		}
+		
+		self.view.addSubview(self.bioLabel!)
+		
+		//Constraints
+		let topConstraint = NSLayoutConstraint(item: self.bioLabel!, attribute: .top, relatedBy: .equal, toItem: self.titleLabel!, attribute: .bottom, multiplier: 1.0, constant: 8.0)
+		let bottomConstraint = NSLayoutConstraint(item: self.bioLabel!, attribute: .bottom, relatedBy: .equal,
+			toItem: self.bioLabel!.superview, attribute: .bottom, multiplier: 1.0, constant: -8.0)
+		let trailingConstraint = NSLayoutConstraint(item: self.bioLabel!, attribute: .trailing, relatedBy: .equal, toItem: self.bioLabel!.superview, attribute: .trailing, multiplier: 1.0, constant: -8.0)
+		let leadingConstraint = NSLayoutConstraint(item: self.bioLabel!, attribute: .leading, relatedBy: .equal, toItem: self.bioLabel!.superview, attribute: .leading, multiplier: 1.0, constant: 8.0)
+		
+		self.view.addConstraints([topConstraint,leadingConstraint,trailingConstraint,bottomConstraint])
 	}
 	
 }
