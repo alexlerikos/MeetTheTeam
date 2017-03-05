@@ -44,6 +44,7 @@ extension MTTMainViewController : UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
 		let profileVC = MTTProfileViewController()
+		profileVC.member = self.teamMemberArray?[indexPath.row]
 		self.navigationController?.pushViewController(profileVC, animated: true)
 	}
 }
