@@ -17,6 +17,7 @@ extension MTTMainViewController : UITableViewDelegate, UITableViewDataSource {
 		self.tableView?.register(MTTMainTableViewCell.self, forCellReuseIdentifier: MemberCellIdentifier)
 		self.tableView?.delegate = self
 		self.tableView?.dataSource = self
+		self.tableView?.backgroundColor = UIColor.mainBackgroundColor()
 		self.view.addSubview(self.tableView!)
 		
 	}

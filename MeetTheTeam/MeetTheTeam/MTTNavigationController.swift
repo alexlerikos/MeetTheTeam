@@ -13,15 +13,27 @@ class MTTNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		self.navigationBar.barTintColor = UIColor.navBarBackgroundColor()
-		self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.textColor()]
+		self.setUpAppearance()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+	
+	private func setUpAppearance(){
+		
+		// add blur effect
+		let bounds = self.navigationBar.bounds as CGRect!
+		let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+		visualEffectView.frame = bounds!
+		visualEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+		self.navigationController?.navigationBar.addSubview(visualEffectView)
+		
+		// set color tint
+		self.navigationBar.barTintColor = UIColor.navBarBackgroundColor()
+		self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.textColor()]
+	}
 
     /*
     // MARK: - Navigation

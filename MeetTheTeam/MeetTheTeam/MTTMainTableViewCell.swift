@@ -20,6 +20,8 @@ class MTTMainTableViewCell: UITableViewCell {
 	override init(style:UITableViewCellStyle, reuseIdentifier:String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		
+		self.setUpAppearance()
+		
 		self.setupAvatarImage()
 		self.setupNameLabel()
 		self.setupTitleLabel()
@@ -29,8 +31,13 @@ class MTTMainTableViewCell: UITableViewCell {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
-	
 	// MARK: Setup Methods
+	private func setUpAppearance(){
+		self.backgroundColor = UIColor.clear
+		self.selectionStyle = .none
+	}
+	
+	
 	private func setupAvatarImage() {
 		
 		self.memberAvatarImageView = AvatarRoundImageView(frame: CGRect(x: 0.0, y: 0.0, width: 75.0, height: 75.0))

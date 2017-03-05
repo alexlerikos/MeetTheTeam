@@ -22,7 +22,7 @@ class ProfileBioTextView: UITextView {
 	private func setUpTextView(){
 		self.text = "No Bio"
 		self.backgroundColor = UIColor.clear
-		self.textColor = UIColor.white
+		self.textColor = UIColor.textColor()
 		self.font = UIFont.systemFont(ofSize: 20.0)
 	}
 

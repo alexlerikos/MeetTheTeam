@@ -23,7 +23,7 @@ class ProfileBioLabel: UILabel {
 	
 	private func setupLabel(){
 		self.text = "No Bio"
-		self.textColor = UIColor.white
+		self.textColor = UIColor.textColor()
 		self.numberOfLines = 0
 	}
 	

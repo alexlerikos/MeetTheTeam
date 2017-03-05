@@ -22,8 +22,7 @@ class MTTProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		
-		self.setUpNavigationTitle()
+		self.setUpViewAppearance()
 		self.setUpProfileImageView()
 		self.setUpNameLabelView()
 		self.setUpTitleLabel()
@@ -36,14 +35,16 @@ class MTTProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 	
-	private func setUpNavigationTitle(){
+	private func setUpViewAppearance() {
 		guard self.member != nil else {
 			self.navigationItem.title = "No Name"
 			return
 		}
 		
 		self.navigationItem.title = "\(self.member!.firstName!) \(self.member!.lastName!)"
+		self.view.backgroundColor = UIColor.mainBackgroundColor()
 	}
+	
 	
 	private func setUpProfileImageView() {
 		
