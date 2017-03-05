@@ -98,7 +98,7 @@ class MTTProfileViewController: UIViewController {
 		let heightConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .height, relatedBy: .equal,
 		                                          toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0)
 		//
-		let widthConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 200.0)
+		let widthConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 300.0)
 		//
 		let yConstraint = NSLayoutConstraint(item: self.nameLabel!, attribute: .bottom, relatedBy: .equal, toItem: self.profileImageView!, attribute: .bottom, multiplier: 1.0, constant: -20.0)
 		//

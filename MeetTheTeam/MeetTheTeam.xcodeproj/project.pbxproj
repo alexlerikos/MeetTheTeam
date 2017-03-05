@@ -32,6 +32,9 @@
 		C591804A1E6B508200BAD62D /* MTTMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59180491E6B508200BAD62D /* MTTMember.swift */; };
 		C591804D1E6B528700BAD62D /* team.json in Resources */ = {isa = PBXBuildFile; fileRef = C591804C1E6B528700BAD62D /* team.json */; };
 		C591804F1E6B62EB00BAD62D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C591804E1E6B62EB00BAD62D /* LaunchScreen.storyboard */; };
+		C5F6523E1E6CC1D900586B58 /* Abadi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5F6523D1E6CC1D900586B58 /* Abadi.ttf */; };
+		C5F6523F1E6CC1D900586B58 /* Abadi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5F6523D1E6CC1D900586B58 /* Abadi.ttf */; };
+		C5F652401E6CC1D900586B58 /* Abadi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5F6523D1E6CC1D900586B58 /* Abadi.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,7 @@
 		C59180491E6B508200BAD62D /* MTTMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTMember.swift; sourceTree = "<group>"; };
 		C591804C1E6B528700BAD62D /* team.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = team.json; sourceTree = "<group>"; };
 		C591804E1E6B62EB00BAD62D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C5F6523D1E6CC1D900586B58 /* Abadi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Abadi.ttf; sourceTree = "<group>"; };
 		E7CD7C59805C4BFB72AB7170 /* Pods_MeetTheTeamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetTheTeamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3B07B9CCE6ED40C095380A /* Pods-MeetTheTeamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetTheTeamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetTheTeamTests/Pods-MeetTheTeamTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,9 +276,18 @@
 		C591804B1E6B526E00BAD62D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C5F652481E6CC5A800586B58 /* Fonts */,
 				C591804C1E6B528700BAD62D /* team.json */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		C5F652481E6CC5A800586B58 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C5F6523D1E6CC1D900586B58 /* Abadi.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		EE1BA8D4A44FB9AD7703D8C9 /* Pods */ = {
@@ -410,6 +423,7 @@
 			files = (
 				C591804F1E6B62EB00BAD62D /* LaunchScreen.storyboard in Resources */,
 				C591804D1E6B528700BAD62D /* team.json in Resources */,
+				C5F6523E1E6CC1D900586B58 /* Abadi.ttf in Resources */,
 				C591800C1E6B415200BAD62D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F6523F1E6CC1D900586B58 /* Abadi.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F652401E6CC1D900586B58 /* Abadi.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

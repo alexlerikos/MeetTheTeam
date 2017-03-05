@@ -24,6 +24,12 @@ class ProfileNameLabel: UILabel {
 	private func setupLabel(){
 		self.text = "No name"
 		self.textColor = UIColor.white
+		self.font = UIFont.systemFont(ofSize: 30.0)
+		
+		// Add shadow
+		self.layer.shadowOffset = CGSize(width: 0, height: 0)
+		self.layer.shadowOpacity = 1
+		self.layer.shadowRadius = 7.0
 	}
 	
 	func setNameText(member:MTTMember){

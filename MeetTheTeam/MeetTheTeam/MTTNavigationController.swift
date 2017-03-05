@@ -32,7 +32,17 @@ class MTTNavigationController: UINavigationController {
 		
 		// set color tint
 		self.navigationBar.barTintColor = UIColor.navBarBackgroundColor()
-		self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.textColor()]
+		self.navigationBar.titleTextAttributes = [
+			NSForegroundColorAttributeName : UIColor.textColor(),
+			NSFontAttributeName: UIFont(name: "AbadiMT-CondensedExtraBold", size: 27)!]
+		for family: String in UIFont.familyNames
+		{
+			print("\(family)")
+			for names: String in UIFont.fontNames(forFamilyName: family)
+			{
+				print("== \(names)")
+			}
+		}
 	}
 
     /*
