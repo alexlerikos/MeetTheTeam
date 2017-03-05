@@ -13,6 +13,7 @@
 		C57C82E21E6B64B000E658A0 /* MTTMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82E11E6B64B000E658A0 /* MTTMainTableViewCell.swift */; };
 		C57C82E41E6B65CB00E658A0 /* MTTMainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82E31E6B65CB00E658A0 /* MTTMainViewController+TableView.swift */; };
 		C57C82E81E6B676200E658A0 /* MTTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82E71E6B676200E658A0 /* MTTConstants.swift */; };
+		C57C82EC1E6B86DE00E658A0 /* AvatarRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82EB1E6B86DE00E658A0 /* AvatarRoundImageView.swift */; };
 		C59180021E6B415200BAD62D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59180011E6B415200BAD62D /* AppDelegate.swift */; };
 		C591800A1E6B415200BAD62D /* MeetTheTeam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C59180081E6B415200BAD62D /* MeetTheTeam.xcdatamodeld */; };
 		C591800C1E6B415200BAD62D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C591800B1E6B415200BAD62D /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		C57C82E11E6B64B000E658A0 /* MTTMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTMainTableViewCell.swift; sourceTree = "<group>"; };
 		C57C82E31E6B65CB00E658A0 /* MTTMainViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MTTMainViewController+TableView.swift"; sourceTree = "<group>"; };
 		C57C82E71E6B676200E658A0 /* MTTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTConstants.swift; sourceTree = "<group>"; };
+		C57C82EB1E6B86DE00E658A0 /* AvatarRoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarRoundImageView.swift; sourceTree = "<group>"; };
 		C5917FFE1E6B415200BAD62D /* MeetTheTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetTheTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59180011E6B415200BAD62D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59180091E6B415200BAD62D /* MeetTheTeam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeetTheTeam.xcdatamodel; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				C57C82E31E6B65CB00E658A0 /* MTTMainViewController+TableView.swift */,
 				C57C82E11E6B64B000E658A0 /* MTTMainTableViewCell.swift */,
+				C57C82EB1E6B86DE00E658A0 /* AvatarRoundImageView.swift */,
 			);
 			name = "MTTMain TableView";
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				C57C82E81E6B676200E658A0 /* MTTConstants.swift in Sources */,
 				C59180391E6B42AE00BAD62D /* MTTNavigationController.swift in Sources */,
 				C591800A1E6B415200BAD62D /* MeetTheTeam.xcdatamodeld in Sources */,
+				C57C82EC1E6B86DE00E658A0 /* AvatarRoundImageView.swift in Sources */,
 				C59180331E6B421700BAD62D /* MTTMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

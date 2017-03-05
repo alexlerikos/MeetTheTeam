@@ -14,7 +14,7 @@ extension MTTMainViewController : UITableViewDelegate, UITableViewDataSource {
 	internal func setupMainTableView(){
 		
 		self.tableView = UITableView(frame: self.view.frame, style: .plain)
-		self.tableView?.register(MTTMainTableViewCell.classForCoder(), forCellReuseIdentifier: memberCellIdentifier)
+		self.tableView?.register(MTTMainTableViewCell.self, forCellReuseIdentifier: MemberCellIdentifier)
 		self.tableView?.delegate = self
 		self.tableView?.dataSource = self
 		self.view.addSubview(self.tableView!)
@@ -23,17 +23,16 @@ extension MTTMainViewController : UITableViewDelegate, UITableViewDataSource {
 	
 	// MARK: TableViewDelegate Methods
 	
-	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-		return 1
-	}
-	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return 20
+	}
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+		return MainTableViewRowHeight
 	}
 	
 	// MARK: TableViewDataSource Methods
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cellIdentifier:String = memberCellIdentifier
+		let cellIdentifier:String = MemberCellIdentifier
 		
 		let cell:MTTMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MTTMainTableViewCell
 		return cell
