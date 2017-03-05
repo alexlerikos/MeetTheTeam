@@ -19,8 +19,8 @@ class MTTMainViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
-		self.view.backgroundColor = UIColor.white
-		self.navigationItem.title = "Meet The Team"
+		self.setUpViexColorAndText()
+		
 		self.setupMainTableView()
 		self.setupTeamMemberData()
     }
@@ -29,6 +29,13 @@ class MTTMainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	private func setUpViexColorAndText() {
+		
+		self.view.backgroundColor = UIColor.mainBackgroundColor()
+		self.navigationItem.title = "Meet The Team"
+	}
+	
 	
 	// MARK: Setup Team Member Array
 	

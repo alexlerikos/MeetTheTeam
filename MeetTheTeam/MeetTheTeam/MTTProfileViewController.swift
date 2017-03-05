@@ -21,7 +21,8 @@ class MTTProfileViewController: UIViewController {
 	// MARK: Initializers
     override func viewDidLoad() {
         super.viewDidLoad()
-		self.view.backgroundColor = UIColor.red
+		
+		
 		self.setUpNavigationTitle()
 		self.setUpProfileImageView()
 		self.setUpNameLabelView()

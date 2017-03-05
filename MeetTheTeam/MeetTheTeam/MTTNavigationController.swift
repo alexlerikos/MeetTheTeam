@@ -12,8 +12,9 @@ class MTTNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		
+		self.navigationBar.barTintColor = UIColor.navBarBackgroundColor()
+		self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.textColor()]
     }
 
     override func didReceiveMemoryWarning() {
