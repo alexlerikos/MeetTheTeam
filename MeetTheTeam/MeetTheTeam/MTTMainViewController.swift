@@ -18,7 +18,9 @@ class MTTMainViewController: UIViewController {
 	// MARK: Initializers 
 	override func viewDidLoad() {
         super.viewDidLoad()
+		
 		self.view.backgroundColor = UIColor.white
+		self.navigationItem.title = "Meet The Team"
 		
 		self.setupMainTableView()
 		

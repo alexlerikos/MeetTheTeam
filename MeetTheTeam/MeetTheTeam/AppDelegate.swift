@@ -19,9 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		// MARK: Initialize Base View Controller
 		window = UIWindow(frame: UIScreen.main.bounds)
-		let mainViewController = MTTMainViewController()
-		window?.rootViewController = mainViewController
 		window?.makeKeyAndVisible()
+		
+		let navigationController = MTTNavigationController(rootViewController: MTTMainViewController())
+		window?.rootViewController = navigationController
 		
 		return true
 	}
