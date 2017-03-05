@@ -11,14 +11,17 @@ import UIKit
 class MTTMainTableViewCell: UITableViewCell {
 	
 	var member:MTTMember?
-	var memberNameLabel:UILabel?
-	var memberTitleLabel:UILabel?
+	var memberNameLabel: MainMemberNameLabel?
+	var memberTitleLabel: MainMemberTitleLabel?
 	var memberAvatarImageView:AvatarRoundImageView?
 	
 	// MARK: Initializers
 	override init(style:UITableViewCellStyle, reuseIdentifier:String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
+		
 		self.setupAvatarImage()
+		self.setupNameLabel()
+		self.setupTitleLabel()
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -32,7 +35,6 @@ class MTTMainTableViewCell: UITableViewCell {
 		self.memberAvatarImageView = AvatarRoundImageView(frame: CGRect(x: 0.0, y: 0.0, width: 75.0, height: 75.0))
 		
 		guard self.memberAvatarImageView != nil else{
-			NSLog("Error instantiating avitar image", nil)
 			return
 		}
 		
@@ -54,10 +56,61 @@ class MTTMainTableViewCell: UITableViewCell {
 		let xConstraint = NSLayoutConstraint(item: self.memberAvatarImageView!, attribute: .leading, relatedBy: .equal, toItem: self.memberAvatarImageView!.superview, attribute: .leading, multiplier: 1, constant: 8.0)
 		
 		self.addConstraints([yConstraint,xConstraint,heightConstraint, widthConstraint])
+	}
+	
+	private func setupNameLabel() {
+		
+		self.memberNameLabel = MainMemberNameLabel(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 24.0))
+		self.memberNameLabel!.translatesAutoresizingMaskIntoConstraints = false
+		
+		if self.member != nil {
+			self.memberNameLabel!.text = "\(self.member!.firstName) \(self.member!.lastName)"
+		}
+		
+		self.addSubview(self.memberNameLabel!)
+		
+		//Constraints
+		let heightConstraint = NSLayoutConstraint(item: self.memberNameLabel!, attribute: .height, relatedBy: .equal,
+		                                          toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0)
+		
+		let widthConstraint = NSLayoutConstraint(item: self.memberNameLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100.0)
+		
+		let yConstraint = NSLayoutConstraint(item: self.memberNameLabel!, attribute: .centerY, relatedBy: .equal, toItem: self.memberAvatarImageView!.superview, attribute: .centerY, multiplier: 1, constant: -25.0)
+		
+		let xConstraint = NSLayoutConstraint(item: self.memberNameLabel!, attribute: .leading, relatedBy: .equal, toItem: self.memberAvatarImageView, attribute: .trailing, multiplier: 1, constant: 8.0)
+		
+		self.addConstraints([yConstraint,xConstraint,heightConstraint, widthConstraint])
 		
 		
 	}
 
+	private func setupTitleLabel() {
+		
+		self.memberTitleLabel = MainMemberTitleLabel(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 24.0))
+		self.memberTitleLabel!.translatesAutoresizingMaskIntoConstraints = false
+		
+		if self.member != nil {
+			self.memberTitleLabel!.text = self.member!.title
+		}
+		
+		self.addSubview(self.memberTitleLabel!)
+		
+		//Constraints
+		let heightConstraint = NSLayoutConstraint(item: self.memberTitleLabel!, attribute: .height, relatedBy: .equal,
+		                                          toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0)
+		
+		let widthConstraint = NSLayoutConstraint(item: self.memberTitleLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100.0)
+		
+		let yConstraint = NSLayoutConstraint(item: self.memberTitleLabel!, attribute: .centerY, relatedBy: .equal, toItem: self.memberAvatarImageView!.superview, attribute: .centerY, multiplier: 1, constant: 25.0)
+		
+		let xConstraint = NSLayoutConstraint(item: self.memberTitleLabel!, attribute: .leading, relatedBy: .equal, toItem: self.memberAvatarImageView, attribute: .trailing, multiplier: 1, constant: 8.0)
+		
+		self.addConstraints([yConstraint,xConstraint,heightConstraint, widthConstraint])
+		
+		
+	}
+	
+	
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
