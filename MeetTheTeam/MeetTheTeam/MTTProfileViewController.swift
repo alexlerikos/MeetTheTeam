@@ -15,7 +15,7 @@ class MTTProfileViewController: UIViewController {
 	var member:MTTMember?
 	var nameLabel:ProfileNameLabel?
 	var titleLabel:ProfileTitleLabel?
-	var bioLabel:ProfileBioLabel?
+	var bioTextView:ProfileBioTextView?
 	var profileImageView:UIImageView?
 	
 	// MARK: Initializers
@@ -26,7 +26,7 @@ class MTTProfileViewController: UIViewController {
 		self.setUpProfileImageView()
 		self.setUpNameLabelView()
 		self.setUpTitleLabel()
-		self.setUpBioLabel()
+		self.setUpBioLabelTextView()
 		
     }
 
@@ -127,25 +127,27 @@ class MTTProfileViewController: UIViewController {
 		self.view.addConstraints([yConstraint,xConstraint,trailingConstraint,heightConstraint])
 
 	}
-	
-	private func setUpBioLabel(){
-		self.bioLabel = ProfileBioLabel(frame: CGRect.zero)
-		self.bioLabel!.translatesAutoresizingMaskIntoConstraints = false
+
+	private func setUpBioLabelTextView(){
+		self.bioTextView = ProfileBioTextView(frame: CGRect.zero, textContainer: nil)
+		self.bioTextView!.translatesAutoresizingMaskIntoConstraints = false
 		
 		if self.member != nil {
-			self.bioLabel!.setBioText(member: self.member!)
+			self.bioTextView!.setBioText(member: self.member!)
 		}
 		
-		self.view.addSubview(self.bioLabel!)
+		self.view.addSubview(self.bioTextView!)
 		
 		//Constraints
-		let topConstraint = NSLayoutConstraint(item: self.bioLabel!, attribute: .top, relatedBy: .equal, toItem: self.titleLabel!, attribute: .bottom, multiplier: 1.0, constant: 8.0)
-		let bottomConstraint = NSLayoutConstraint(item: self.bioLabel!, attribute: .bottom, relatedBy: .equal,
-			toItem: self.bioLabel!.superview, attribute: .bottom, multiplier: 1.0, constant: -8.0)
-		let trailingConstraint = NSLayoutConstraint(item: self.bioLabel!, attribute: .trailing, relatedBy: .equal, toItem: self.bioLabel!.superview, attribute: .trailing, multiplier: 1.0, constant: -8.0)
-		let leadingConstraint = NSLayoutConstraint(item: self.bioLabel!, attribute: .leading, relatedBy: .equal, toItem: self.bioLabel!.superview, attribute: .leading, multiplier: 1.0, constant: 8.0)
+		let topConstraint = NSLayoutConstraint(item: self.bioTextView!, attribute: .top, relatedBy: .equal, toItem: self.titleLabel!, attribute: .bottom, multiplier: 1.0, constant: 8.0)
+		let bottomConstraint = NSLayoutConstraint(item: self.bioTextView!, attribute: .bottom, relatedBy: .equal,
+		                                          toItem: self.bioTextView!.superview, attribute: .bottom, multiplier: 1.0, constant: -8.0)
+		let trailingConstraint = NSLayoutConstraint(item: self.bioTextView!, attribute: .trailing, relatedBy: .equal, toItem: self.bioTextView!.superview, attribute: .trailing, multiplier: 1.0, constant: -8.0)
+		let leadingConstraint = NSLayoutConstraint(item: self.bioTextView!, attribute: .leading, relatedBy: .equal, toItem: self.bioTextView!.superview, attribute: .leading, multiplier: 1.0, constant: 8.0)
 		
 		self.view.addConstraints([topConstraint,leadingConstraint,trailingConstraint,bottomConstraint])
 	}
+
+	
 	
 }
