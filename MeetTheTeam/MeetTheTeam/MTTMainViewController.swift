@@ -44,7 +44,6 @@ class MTTMainViewController: UIViewController {
 		do {
 			let json:Any! = try JSONSerialization.jsonObject(with: jsonData as Data, options: .mutableContainers)
 			self.teamMemberArray = Mapper<MTTMember>().mapArray(JSONArray: json as! [[String : Any]])
-			self.tableView?.reloadData()
 		} catch {
 			return
 		}
