@@ -14,7 +14,7 @@ class MTTProfileViewController: UIViewController {
 	// MARK: Properties
 	var member:MTTMember?
 	var nameLabel:ProfileNameLabel?
-	var titleLabel:UILabel?
+	var titleLabel:ProfileTitleLabel?
 	var bioLabel:ProfileBioLabel?
 	var profileImageView:UIImageView?
 	
@@ -105,26 +105,26 @@ class MTTProfileViewController: UIViewController {
 	}
 	
 	private func setUpTitleLabel(){
-//		self.titleLabel = ProfileTitleLabel(frame: CGRect.zero)
-//		self.titleLabel!.translatesAutoresizingMaskIntoConstraints = false
-//		
-//		if self.member != nil {
-//			self.titleLabel!.setTitleText(member: self.member!)
-//		}
+		self.titleLabel = ProfileTitleLabel(frame: CGRect.zero)
+		self.titleLabel!.translatesAutoresizingMaskIntoConstraints = false
+		
+		if self.member != nil {
+			self.titleLabel!.setTitleText(member: self.member!)
+		}
 
-//		self.view.addSubview(self.titleLabel!)
+		self.view.addSubview(self.titleLabel!)
 		
 		//Constraints
-//		let heightConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .height, relatedBy: .equal,
-//			toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0)
-//		//
-//		let widthConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100.0)
-//		//
-//		let yConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: 0.0)
-//		//
-//		let xConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1.0, constant: 20.0)
-//		//
-//		self.view.addConstraints([widthConstraint,heightConstraint,yConstraint,xConstraint])
+		let heightConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .height, relatedBy: .equal,
+			toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0)
+		//
+		let widthConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 200.0)
+		//
+		let yConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .top, relatedBy: .equal, toItem: self.profileImageView!, attribute: .bottom, multiplier: 1.0, constant: 8.0)
+		//
+		let xConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .leading, relatedBy: .equal, toItem: self.titleLabel?.superview, attribute: .leading, multiplier: 1.0, constant: 8.0)
+		//
+		self.view.addConstraints([yConstraint,xConstraint,widthConstraint,heightConstraint,])
 
 	}
 	
