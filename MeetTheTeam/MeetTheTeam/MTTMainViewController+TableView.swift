@@ -40,4 +40,10 @@ extension MTTMainViewController : UITableViewDelegate, UITableViewDataSource {
 		}
 		return cell
 	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		let profileVC = MTTProfileViewController()
+		self.navigationController?.pushViewController(profileVC, animated: true)
+	}
 }

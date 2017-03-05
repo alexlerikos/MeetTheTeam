@@ -16,6 +16,7 @@
 		C57C82EC1E6B86DE00E658A0 /* AvatarRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82EB1E6B86DE00E658A0 /* AvatarRoundImageView.swift */; };
 		C57C82EE1E6B995C00E658A0 /* MainMemberNameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82ED1E6B995C00E658A0 /* MainMemberNameLabel.swift */; };
 		C57C82F11E6B9D3C00E658A0 /* MainMemberTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82F01E6B9D3C00E658A0 /* MainMemberTitleLabel.swift */; };
+		C57C82F51E6BA8DA00E658A0 /* MTTProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82F41E6BA8DA00E658A0 /* MTTProfileViewController.swift */; };
 		C59180021E6B415200BAD62D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59180011E6B415200BAD62D /* AppDelegate.swift */; };
 		C591800A1E6B415200BAD62D /* MeetTheTeam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C59180081E6B415200BAD62D /* MeetTheTeam.xcdatamodeld */; };
 		C591800C1E6B415200BAD62D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C591800B1E6B415200BAD62D /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		C57C82EB1E6B86DE00E658A0 /* AvatarRoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarRoundImageView.swift; sourceTree = "<group>"; };
 		C57C82ED1E6B995C00E658A0 /* MainMemberNameLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMemberNameLabel.swift; sourceTree = "<group>"; };
 		C57C82F01E6B9D3C00E658A0 /* MainMemberTitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMemberTitleLabel.swift; sourceTree = "<group>"; };
+		C57C82F41E6BA8DA00E658A0 /* MTTProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTProfileViewController.swift; sourceTree = "<group>"; };
 		C5917FFE1E6B415200BAD62D /* MeetTheTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetTheTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59180011E6B415200BAD62D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59180091E6B415200BAD62D /* MeetTheTeam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeetTheTeam.xcdatamodel; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		C591803C1E6B458400BAD62D /* Profile View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C57C82F41E6BA8DA00E658A0 /* MTTProfileViewController.swift */,
 			);
 			name = "Profile View Controller";
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				C59180021E6B415200BAD62D /* AppDelegate.swift in Sources */,
 				C57C82E81E6B676200E658A0 /* MTTConstants.swift in Sources */,
 				C59180391E6B42AE00BAD62D /* MTTNavigationController.swift in Sources */,
+				C57C82F51E6BA8DA00E658A0 /* MTTProfileViewController.swift in Sources */,
 				C591800A1E6B415200BAD62D /* MeetTheTeam.xcdatamodeld in Sources */,
 				C57C82EC1E6B86DE00E658A0 /* AvatarRoundImageView.swift in Sources */,
 				C57C82F11E6B9D3C00E658A0 /* MainMemberTitleLabel.swift in Sources */,
