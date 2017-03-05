@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class MTTMainTableViewCell: UITableViewCell {
 	
 	var member:MTTMember?
@@ -115,9 +116,31 @@ class MTTMainTableViewCell: UITableViewCell {
 		self.member = member
 		self.memberTitleLabel?.setTitleText(member:member)
 		self.memberNameLabel?.setNameText(member: member)
+		
+		self.updateAvatarImage()
 	}
 	
+	private func updateAvatarImage(){
 	
+		guard let imageURLString = self.member?.avatarImageURL else {
+			return
+		}
+		
+		let avatarImageURL = URL(string: imageURLString)
+		
+		self.memberAvatarImageView!.kf.setImage(with: avatarImageURL!,
+			completionHandler: {(image, error, cacheType, imageUrl) in
+				guard error == nil else {
+					self.memberAvatarImageView!.image = UIImage(named:"AvatarBase")
+					return
+				}
+				self.memberAvatarImageView?.image = image
+			}
+		)
+	
+	}
+
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

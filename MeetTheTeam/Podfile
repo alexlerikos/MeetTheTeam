@@ -7,15 +7,19 @@ target 'MeetTheTeam' do
 
   # Object Mapper - JSON Reader
   pod 'ObjectMapper', '~> 2.2'
+  pod 'Kingfisher', '~> 3.0'
+  
 
   target 'MeetTheTeamTests' do
     inherit! :search_paths
     pod 'ObjectMapper', '~> 2.2'
+	pod 'Kingfisher', '~> 3.0'
   end
 
   target 'MeetTheTeamUITests' do
     inherit! :search_paths
     pod 'ObjectMapper', '~> 2.2'
+	pod 'Kingfisher', '~> 3.0'
   end
 
 end

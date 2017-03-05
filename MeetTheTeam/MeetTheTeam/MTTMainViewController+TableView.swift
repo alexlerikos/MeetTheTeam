@@ -24,7 +24,7 @@ extension MTTMainViewController : UITableViewDelegate, UITableViewDataSource {
 	// MARK: TableViewDelegate Methods
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 20
+		return self.teamMemberArray!.count
 	}
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
 		return MainTableViewRowHeight
