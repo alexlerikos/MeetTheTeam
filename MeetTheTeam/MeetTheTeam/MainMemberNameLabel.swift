@@ -24,5 +24,9 @@ class MainMemberNameLabel: UILabel {
 	private func setupLabel(){
 		self.text = "No name"
 	}
+	
+	func setNameText(member:MTTMember){
+		self.text = "\(member.firstName!) \(member.lastName!)"
+	}
 
 }

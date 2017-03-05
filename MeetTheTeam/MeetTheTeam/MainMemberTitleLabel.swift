@@ -25,4 +25,7 @@ class MainMemberTitleLabel: UILabel {
 		self.text = "No title"
 	}
 	
+	func setTitleText(member:MTTMember){
+		self.text = member.title
+	}
 }

@@ -64,7 +64,7 @@ class MTTMainTableViewCell: UITableViewCell {
 		self.memberNameLabel!.translatesAutoresizingMaskIntoConstraints = false
 		
 		if self.member != nil {
-			self.memberNameLabel!.text = "\(self.member!.firstName) \(self.member!.lastName)"
+			self.memberNameLabel!.setNameText(member: self.member!)
 		}
 		
 		self.addSubview(self.memberNameLabel!)
@@ -90,7 +90,7 @@ class MTTMainTableViewCell: UITableViewCell {
 		self.memberTitleLabel!.translatesAutoresizingMaskIntoConstraints = false
 		
 		if self.member != nil {
-			self.memberTitleLabel!.text = self.member!.title
+			self.memberTitleLabel!.setTitleText(member: self.member!)
 		}
 		
 		self.addSubview(self.memberTitleLabel!)
@@ -108,6 +108,13 @@ class MTTMainTableViewCell: UITableViewCell {
 		self.addConstraints([yConstraint,xConstraint,heightConstraint, widthConstraint])
 		
 		
+	}
+	
+	// MARK: Configure Cell
+	func configureCell(member:MTTMember){
+		self.member = member
+		self.memberTitleLabel?.setTitleText(member:member)
+		self.memberNameLabel?.setNameText(member: member)
 	}
 	
 	

@@ -35,6 +35,9 @@ extension MTTMainViewController : UITableViewDelegate, UITableViewDataSource {
 		let cellIdentifier:String = MemberCellIdentifier
 		
 		let cell:MTTMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MTTMainTableViewCell
+		if let member = self.teamMemberArray?[indexPath.row]{
+			cell.configureCell(member: member)
+		}
 		return cell
 	}
 }
