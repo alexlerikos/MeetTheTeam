@@ -14,14 +14,14 @@ class MTTProfileViewController: UIViewController {
 	// MARK: Properties
 	var member:MTTMember?
 	var nameLabel:ProfileNameLabel?
-	var titleLabel:ProfileTitleLabel?
+	var titleLabel:UILabel?
 	var bioLabel:ProfileBioLabel?
 	var profileImageView:UIImageView?
 	
 	// MARK: Initializers
     override func viewDidLoad() {
         super.viewDidLoad()
-		
+		self.view.backgroundColor = UIColor.red
 		self.setUpNavigationTitle()
 		self.setUpProfileImageView()
 		self.setUpNameLabelView()
@@ -65,8 +65,8 @@ class MTTProfileViewController: UIViewController {
 		}
 		
 		self.view.addSubview(self.profileImageView!)
-		// Constraints
 		
+		// Constraints
 		let imageHeight = self.view.frame.width
 		
 		let heightConstraint = NSLayoutConstraint(item: self.profileImageView!, attribute: .height, relatedBy: .equal,
@@ -83,11 +83,49 @@ class MTTProfileViewController: UIViewController {
 	}
 	
 	private func setUpNameLabelView() {
+		self.nameLabel = ProfileNameLabel(frame: CGRect(x: 0.0, y: 500.0, width: 100.0, height: 24.0))
+		self.nameLabel!.translatesAutoresizingMaskIntoConstraints = false
 		
+		if self.member != nil {
+			self.nameLabel!.setNameText(member: self.member!)
+		}
+		
+		self.view.addSubview(self.nameLabel!)
+		
+		//Constraints
+		
+		//Y Constraint
+		self.view.addConstraint(NSLayoutConstraint(item: self.nameLabel!, attribute: .bottom, relatedBy: .equal, toItem: self.profileImageView!, attribute: .bottom, multiplier: 1.0, constant: -20.0))
+		//X Constraint
+		self.view.addConstraint(NSLayoutConstraint(item: self.nameLabel!, attribute: .leading, relatedBy: .equal, toItem: self.nameLabel?.superview, attribute: .leading, multiplier: 1.0, constant: 8.0))
+		//Height Constraint
+		self.view.addConstraint(NSLayoutConstraint(item: self.nameLabel!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0))
+		//Width Constraint
+		self.view.addConstraint(NSLayoutConstraint(item: self.nameLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 200.0))
 	}
 	
 	private func setUpTitleLabel(){
+//		self.titleLabel = ProfileTitleLabel(frame: CGRect.zero)
+//		self.titleLabel!.translatesAutoresizingMaskIntoConstraints = false
+//		
+//		if self.member != nil {
+//			self.titleLabel!.setTitleText(member: self.member!)
+//		}
+
+//		self.view.addSubview(self.titleLabel!)
 		
+		//Constraints
+//		let heightConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .height, relatedBy: .equal,
+//			toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0)
+//		//
+//		let widthConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100.0)
+//		//
+//		let yConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+//		//
+//		let xConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1.0, constant: 20.0)
+//		//
+//		self.view.addConstraints([widthConstraint,heightConstraint,yConstraint,xConstraint])
+
 	}
 	
 	private func setUpBioLabel(){

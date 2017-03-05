@@ -20,7 +20,6 @@ extension MTTMainViewController : UITableViewDelegate, UITableViewDataSource {
 		self.view.addSubview(self.tableView!)
 		
 	}
-	
 	// MARK: TableViewDelegate Methods
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
