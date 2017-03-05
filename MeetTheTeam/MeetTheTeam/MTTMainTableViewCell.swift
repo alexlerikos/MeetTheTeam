@@ -48,6 +48,9 @@ class MTTMainTableViewCell: UITableViewCell {
 		
 		self.memberAvatarImageView!.image = UIImage(named:"AvatarBase")
 		self.memberAvatarImageView!.translatesAutoresizingMaskIntoConstraints = false
+		self.memberAvatarImageView!.layer.cornerRadius = AvatarImageRadius
+		self.memberAvatarImageView!.layer.borderWidth = 2.0
+		self.memberAvatarImageView!.clipsToBounds = true
 		self.addSubview(self.memberAvatarImageView!)
 		
 		
@@ -83,7 +86,7 @@ class MTTMainTableViewCell: UITableViewCell {
 		
 		let widthConstraint = NSLayoutConstraint(item: self.memberNameLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 200.0)
 		
-		let yConstraint = NSLayoutConstraint(item: self.memberNameLabel!, attribute: .centerY, relatedBy: .equal, toItem: self.memberAvatarImageView!.superview, attribute: .centerY, multiplier: 1, constant: -25.0)
+		let yConstraint = NSLayoutConstraint(item: self.memberNameLabel!, attribute: .bottom, relatedBy: .equal, toItem: self.memberAvatarImageView!.superview, attribute: .centerY, multiplier: 1, constant: 8.0)
 		
 		let xConstraint = NSLayoutConstraint(item: self.memberNameLabel!, attribute: .leading, relatedBy: .equal, toItem: self.memberAvatarImageView, attribute: .trailing, multiplier: 1, constant: 8.0)
 		
@@ -109,7 +112,7 @@ class MTTMainTableViewCell: UITableViewCell {
 		
 		let widthConstraint = NSLayoutConstraint(item: self.memberTitleLabel!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 300.0)
 		
-		let yConstraint = NSLayoutConstraint(item: self.memberTitleLabel!, attribute: .centerY, relatedBy: .equal, toItem: self.memberAvatarImageView!.superview, attribute: .centerY, multiplier: 1, constant: 25.0)
+		let yConstraint = NSLayoutConstraint(item: self.memberTitleLabel!, attribute: .top, relatedBy: .equal, toItem: self.memberAvatarImageView!.superview, attribute: .centerY, multiplier: 1, constant: 8.0)
 		
 		let xConstraint = NSLayoutConstraint(item: self.memberTitleLabel!, attribute: .leading, relatedBy: .equal, toItem: self.memberAvatarImageView, attribute: .trailing, multiplier: 1, constant: 8.0)
 		

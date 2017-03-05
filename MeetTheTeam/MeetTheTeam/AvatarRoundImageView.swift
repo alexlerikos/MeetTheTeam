@@ -17,16 +17,19 @@ class AvatarRoundImageView: UIImageView {
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
+		self.baseValues()
 	}
 	
 	required override init(frame: CGRect) {
 		super.init(frame: frame)
+		self.baseValues()
 	}
 	
-	func baseValues() {
+	private func baseValues() {
 		self.maskSize = AvtarMaskSize
-		self.borderColor = UIColor.black.cgColor
+		self.borderColor = UIColor.textColor().cgColor
 		self.fillColor = UIColor.clear.cgColor
+		self.layer.borderColor = self.borderColor!
 	}
 	
 
