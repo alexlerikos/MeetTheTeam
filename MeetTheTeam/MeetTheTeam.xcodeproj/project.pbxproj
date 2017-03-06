@@ -747,6 +747,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F62B790CACA2A27951CAA0F /* Pods-MeetTheTeam.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EDSHBZ68RZ;
 				INFOPLIST_FILE = MeetTheTeam/Info.plist;
@@ -761,6 +762,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04D0E4DDB93E452670358CF3 /* Pods-MeetTheTeam.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EDSHBZ68RZ;
 				INFOPLIST_FILE = MeetTheTeam/Info.plist;
