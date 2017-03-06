@@ -12,13 +12,12 @@
 		8EF4EEB44BC5FD34F48391AA /* Pods_MeetTheTeamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B628C6D20C62D26E215FCD7 /* Pods_MeetTheTeamTests.framework */; };
 		C563F81B1E6BB0A2009234E0 /* ProfileNameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C563F81A1E6BB0A2009234E0 /* ProfileNameLabel.swift */; };
 		C563F81D1E6BB0BC009234E0 /* ProfileTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C563F81C1E6BB0BC009234E0 /* ProfileTitleLabel.swift */; };
-		C563F81F1E6BB0F0009234E0 /* ProfileBioLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C563F81E1E6BB0F0009234E0 /* ProfileBioLabel.swift */; };
 		C563F8211E6BD86C009234E0 /* ProfileBioTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C563F8201E6BD86C009234E0 /* ProfileBioTextView.swift */; };
 		C563F8231E6BE025009234E0 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C563F8221E6BE025009234E0 /* UIColor+Custom.swift */; };
 		C57C82E21E6B64B000E658A0 /* MTTMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82E11E6B64B000E658A0 /* MTTMainTableViewCell.swift */; };
 		C57C82E41E6B65CB00E658A0 /* MTTMainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82E31E6B65CB00E658A0 /* MTTMainViewController+TableView.swift */; };
 		C57C82E81E6B676200E658A0 /* MTTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82E71E6B676200E658A0 /* MTTConstants.swift */; };
-		C57C82EC1E6B86DE00E658A0 /* AvatarRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82EB1E6B86DE00E658A0 /* AvatarRoundImageView.swift */; };
+		C57C82EC1E6B86DE00E658A0 /* MainAvatarRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82EB1E6B86DE00E658A0 /* MainAvatarRoundImageView.swift */; };
 		C57C82EE1E6B995C00E658A0 /* MainMemberNameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82ED1E6B995C00E658A0 /* MainMemberNameLabel.swift */; };
 		C57C82F11E6B9D3C00E658A0 /* MainMemberTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82F01E6B9D3C00E658A0 /* MainMemberTitleLabel.swift */; };
 		C57C82F51E6BA8DA00E658A0 /* MTTProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57C82F41E6BA8DA00E658A0 /* MTTProfileViewController.swift */; };
@@ -69,13 +68,12 @@
 		B3194D40770C6ABF7D219D7A /* Pods-MeetTheTeamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetTheTeamUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetTheTeamUITests/Pods-MeetTheTeamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C563F81A1E6BB0A2009234E0 /* ProfileNameLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileNameLabel.swift; sourceTree = "<group>"; };
 		C563F81C1E6BB0BC009234E0 /* ProfileTitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTitleLabel.swift; sourceTree = "<group>"; };
-		C563F81E1E6BB0F0009234E0 /* ProfileBioLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBioLabel.swift; sourceTree = "<group>"; };
 		C563F8201E6BD86C009234E0 /* ProfileBioTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBioTextView.swift; sourceTree = "<group>"; };
 		C563F8221E6BE025009234E0 /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		C57C82E11E6B64B000E658A0 /* MTTMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTMainTableViewCell.swift; sourceTree = "<group>"; };
 		C57C82E31E6B65CB00E658A0 /* MTTMainViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MTTMainViewController+TableView.swift"; sourceTree = "<group>"; };
 		C57C82E71E6B676200E658A0 /* MTTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTConstants.swift; sourceTree = "<group>"; };
-		C57C82EB1E6B86DE00E658A0 /* AvatarRoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarRoundImageView.swift; sourceTree = "<group>"; };
+		C57C82EB1E6B86DE00E658A0 /* MainAvatarRoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAvatarRoundImageView.swift; sourceTree = "<group>"; };
 		C57C82ED1E6B995C00E658A0 /* MainMemberNameLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMemberNameLabel.swift; sourceTree = "<group>"; };
 		C57C82F01E6B9D3C00E658A0 /* MainMemberTitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMemberTitleLabel.swift; sourceTree = "<group>"; };
 		C57C82F41E6BA8DA00E658A0 /* MTTProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTProfileViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 			children = (
 				C563F81A1E6BB0A2009234E0 /* ProfileNameLabel.swift */,
 				C563F81C1E6BB0BC009234E0 /* ProfileTitleLabel.swift */,
-				C563F81E1E6BB0F0009234E0 /* ProfileBioLabel.swift */,
 				C563F8201E6BD86C009234E0 /* ProfileBioTextView.swift */,
 			);
 			name = "MTTProfile UI Elements";
@@ -167,7 +164,7 @@
 		C57C82EF1E6B9CBE00E658A0 /* MTTMain UI Elements */ = {
 			isa = PBXGroup;
 			children = (
-				C57C82EB1E6B86DE00E658A0 /* AvatarRoundImageView.swift */,
+				C57C82EB1E6B86DE00E658A0 /* MainAvatarRoundImageView.swift */,
 				C57C82ED1E6B995C00E658A0 /* MainMemberNameLabel.swift */,
 				C57C82F01E6B9D3C00E658A0 /* MainMemberTitleLabel.swift */,
 			);
@@ -203,7 +200,6 @@
 				C591804E1E6B62EB00BAD62D /* LaunchScreen.storyboard */,
 				C591803A1E6B430F00BAD62D /* Utility */,
 				C591803D1E6B463A00BAD62D /* Models */,
-				C591803B1E6B43B800BAD62D /* Manager */,
 				C59180351E6B424400BAD62D /* Navigation */,
 				C59180341E6B421C00BAD62D /* Main View Controller */,
 				C591803C1E6B458400BAD62D /* Profile View Controller */,
@@ -258,13 +254,6 @@
 				C563F8221E6BE025009234E0 /* UIColor+Custom.swift */,
 			);
 			name = Utility;
-			sourceTree = "<group>";
-		};
-		C591803B1E6B43B800BAD62D /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Manager;
 			sourceTree = "<group>";
 		};
 		C591803C1E6B458400BAD62D /* Profile View Controller */ = {
@@ -620,8 +609,7 @@
 				C563F8231E6BE025009234E0 /* UIColor+Custom.swift in Sources */,
 				C57C82F51E6BA8DA00E658A0 /* MTTProfileViewController.swift in Sources */,
 				C591800A1E6B415200BAD62D /* MeetTheTeam.xcdatamodeld in Sources */,
-				C563F81F1E6BB0F0009234E0 /* ProfileBioLabel.swift in Sources */,
-				C57C82EC1E6B86DE00E658A0 /* AvatarRoundImageView.swift in Sources */,
+				C57C82EC1E6B86DE00E658A0 /* MainAvatarRoundImageView.swift in Sources */,
 				C5F6524A1E6CC7CA00586B58 /* UIFont+Custom.swift in Sources */,
 				C57C82F11E6B9D3C00E658A0 /* MainMemberTitleLabel.swift in Sources */,
 				C57C82EE1E6B995C00E658A0 /* MainMemberNameLabel.swift in Sources */,

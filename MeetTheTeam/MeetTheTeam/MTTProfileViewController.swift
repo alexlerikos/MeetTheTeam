@@ -41,7 +41,6 @@ class MTTProfileViewController: UIViewController {
 		
 		self.navigationItem.title = "\(self.member!.firstName!) \(self.member!.lastName!)"
 		self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
-		self.navigationController?.navigationItem
 		self.view.backgroundColor = UIColor.mainBackgroundColor()
 	}
 	

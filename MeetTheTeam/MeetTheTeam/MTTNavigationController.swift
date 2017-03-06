@@ -35,14 +35,6 @@ class MTTNavigationController: UINavigationController {
 			NSForegroundColorAttributeName : UIColor.textColor(),
 			NSFontAttributeName: UIFont.navigationBarFont()]
 		self.navigationBar.tintColor = UIColor.textColor()
-		
-		for family in UIFont.familyNames {
-			print("\(family)")
-			
-			for name in UIFont.fontNames(forFamilyName: family) {
-				print("   \(name)")
-			}
-		}
 	}
 
 }
