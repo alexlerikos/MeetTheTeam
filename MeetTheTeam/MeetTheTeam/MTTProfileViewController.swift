@@ -45,7 +45,7 @@ class MTTProfileViewController: UIViewController {
 		self.view.backgroundColor = UIColor.mainBackgroundColor()
 	}
 	
-	
+	// MARK: Profile ImageView
 	private func setUpProfileImageView() {
 		
 		self.profileImageView = UIImageView(frame: CGRect.zero)
@@ -88,6 +88,7 @@ class MTTProfileViewController: UIViewController {
 
 	}
 	
+	// MARK: Title Label
 	private func setUpTitleLabel(){
 		self.titleLabel = ProfileTitleLabel(frame: CGRect.zero)
 		self.titleLabel!.translatesAutoresizingMaskIntoConstraints = false
@@ -100,7 +101,7 @@ class MTTProfileViewController: UIViewController {
 		
 		//Constraints
 		let heightConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .height, relatedBy: .equal,
-			toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 24.0)
+			toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 28.0)
 		let trailingConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .trailing, relatedBy: .equal, toItem: self.titleLabel!.superview, attribute: .trailing, multiplier: 1.0, constant: -8.0)
 		let yConstraint = NSLayoutConstraint(item: self.titleLabel!, attribute: .top, relatedBy: .equal, toItem: self.profileImageView!, attribute: .bottom, multiplier: 1.0, constant: 8.0)
 		
@@ -110,6 +111,7 @@ class MTTProfileViewController: UIViewController {
 
 	}
 
+	// MARK: Bio Label
 	private func setUpBioLabelTextView(){
 		self.bioTextView = ProfileBioTextView(frame: CGRect.zero, textContainer: nil)
 		self.bioTextView!.translatesAutoresizingMaskIntoConstraints = false

@@ -23,7 +23,7 @@ class ProfileBioTextView: UITextView {
 		self.text = "No Bio"
 		self.backgroundColor = UIColor.clear
 		self.textColor = UIColor.textColor()
-		self.font = UIFont.italicSystemFont(ofSize: 12.0)
+		self.font = UIFont.bioProfileFont()
 	}
 
 	func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
@@ -32,7 +32,6 @@ class ProfileBioTextView: UITextView {
 	
 	func setBioText(member:MTTMember){
 		self.text = member.bio!
-		self.font = UIFont.systemFont(ofSize: 20.0)
 	}
 	
 }

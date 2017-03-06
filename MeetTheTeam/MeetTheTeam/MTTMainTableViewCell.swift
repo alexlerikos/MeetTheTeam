@@ -14,7 +14,7 @@ class MTTMainTableViewCell: UITableViewCell {
 	var member:MTTMember?
 	var memberNameLabel: MainMemberNameLabel?
 	var memberTitleLabel: MainMemberTitleLabel?
-	var memberAvatarImageView:AvatarRoundImageView?
+	var memberAvatarImageView:MainAvatarRoundImageView?
 	
 	// MARK: Initializers
 	override init(style:UITableViewCellStyle, reuseIdentifier:String?) {
@@ -37,10 +37,10 @@ class MTTMainTableViewCell: UITableViewCell {
 		self.selectionStyle = .none
 	}
 	
-	
+	// MARK: Avatar Label
 	private func setupAvatarImage() {
 		
-		self.memberAvatarImageView = AvatarRoundImageView(frame: CGRect(x: 0.0, y: 0.0, width: 75.0, height: 75.0))
+		self.memberAvatarImageView = MainAvatarRoundImageView(frame: CGRect.zero)
 		
 		guard self.memberAvatarImageView != nil else{
 			return
@@ -69,9 +69,10 @@ class MTTMainTableViewCell: UITableViewCell {
 		self.addConstraints([yConstraint,xConstraint,heightConstraint, widthConstraint])
 	}
 	
+	// MARK: Name Label
 	private func setupNameLabel() {
 		
-		self.memberNameLabel = MainMemberNameLabel(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 24.0))
+		self.memberNameLabel = MainMemberNameLabel(frame: CGRect.zero)
 		self.memberNameLabel!.translatesAutoresizingMaskIntoConstraints = false
 		
 		if self.member != nil {
@@ -94,10 +95,10 @@ class MTTMainTableViewCell: UITableViewCell {
 		
 		
 	}
-
+	// MARK: Title Label
 	private func setupTitleLabel() {
 		
-		self.memberTitleLabel = MainMemberTitleLabel(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 24.0))
+		self.memberTitleLabel = MainMemberTitleLabel(frame: CGRect.zero)
 		self.memberTitleLabel!.translatesAutoresizingMaskIntoConstraints = false
 		
 		if self.member != nil {
@@ -149,12 +150,4 @@ class MTTMainTableViewCell: UITableViewCell {
 		)
 	
 	}
-
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

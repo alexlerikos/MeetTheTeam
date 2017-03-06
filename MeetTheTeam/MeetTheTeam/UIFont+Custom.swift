@@ -23,6 +23,10 @@ extension UIFont {
 	}
 	
 	class func bioProfileFont() -> UIFont {
-		return UIFont(name:"SanFranciscoText-Italic",size:20)!
+		return UIFont(name:"SanFranciscoText-Regular",size:18)!
+	}
+
+	class func mainTitleFont() -> UIFont {
+		return UIFont(name:"SanFranciscoText-Regular",size:18)!
 	}
 }
