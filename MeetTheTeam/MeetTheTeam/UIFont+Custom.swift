@@ -19,7 +19,14 @@ extension UIFont {
 	}
 
 	class func profileTitleFont() -> UIFont {
-		return UIFont(name: "Exo-Bold", size: 25)!
+		
+		let modelName = UIDevice.current.modelName
+		
+		if modelName.contains("5") || modelName.contains("Simulator"){
+			return UIFont(name: "Exo-Bold", size: 22)!
+		}else {
+			return UIFont(name: "Exo-Bold", size: 25)!
+		}
 	}
 	
 	class func bioProfileFont() -> UIFont {
@@ -27,6 +34,14 @@ extension UIFont {
 	}
 
 	class func mainTitleFont() -> UIFont {
-		return UIFont(name:"SanFranciscoText-Regular",size:18)!
+		let modelName = UIDevice.current.modelName
+		
+		if modelName.contains("5") || modelName.contains("Simulator"){
+			return UIFont(name:"SanFranciscoText-Regular",size:16)!
+		} else {
+			return UIFont(name:"SanFranciscoText-Regular",size:18)!
+		}
 	}
+	
+
 }
