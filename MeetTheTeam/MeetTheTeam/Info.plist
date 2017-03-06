@@ -22,7 +22,6 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Abadi.ttf</string>
 		<string>Exo-Bold.otf</string>
 		<string>Exo-ExtraBold.otf</string>
 		<string>SanFranciscoText-Regular.otf</string>
