@@ -1,2 +1,2 @@
 # MeetTheTeam
-MeetTheTeam iOS Client
+MeetTheTeam iOS Client in Swift 3.0
