@@ -21,10 +21,14 @@ extension MTTMainViewController : UITableViewDelegate, UITableViewDataSource {
 		self.view.addSubview(self.tableView!)
 		
 	}
-	// MARK: TableViewDelegate Methods
 	
+	// MARK: TableViewDelegate Methods
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.teamMemberArray!.count
+		if self.teamMemberArray == nil {
+			return 0
+		} else {
+			return self.teamMemberArray!.count
+		}
 	}
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
 		return MainTableViewRowHeight
