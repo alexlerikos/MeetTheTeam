@@ -1,0 +1,6 @@
+framework module Pods_MeetTheTeamTests {
+  umbrella header "Pods-MeetTheTeamTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
