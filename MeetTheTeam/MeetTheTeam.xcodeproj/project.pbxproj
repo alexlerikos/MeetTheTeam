@@ -397,7 +397,7 @@
 				TargetAttributes = {
 					C5917FFD1E6B415200BAD62D = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = EDSHBZ68RZ;
+						DevelopmentTeam = AMD4AC8KYB;
 						ProvisioningStyle = Automatic;
 					};
 					C59180141E6B415200BAD62D = {
@@ -745,10 +745,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EDSHBZ68RZ;
+				DEVELOPMENT_TEAM = AMD4AC8KYB;
 				INFOPLIST_FILE = MeetTheTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.co.MeetTheTeam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.co.MeetTheTeam1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -760,10 +760,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EDSHBZ68RZ;
+				DEVELOPMENT_TEAM = AMD4AC8KYB;
 				INFOPLIST_FILE = MeetTheTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.co.MeetTheTeam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.co.MeetTheTeam1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
