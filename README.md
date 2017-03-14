@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://github.com/alexlerikos/MeetTheTeam/blob/master/README_Images/Main.PNG" alt="Main Picture"/>
-  <img src="https://github.com/alexlerikos/MeetTheTeam/blob/master/README_Images/Profile.PNG" alt="Profile Picture"/>
+  <img src="https://github.com/alexlerikos/MeetTheTeam/blob/master/README_Images/profile.png" alt="Profile Picture"/>
 </p>
 # MeetTheTeam
 ------------------------------
